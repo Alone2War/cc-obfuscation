@@ -20,12 +20,8 @@ def fmt_bytes(fmt):
         if fmt[i] in ("[", "]"):
             i += 1
             continue
-        if fmt[i] in ('f'):
-            res += 32
-            i += 1
-            continue
-        if fmt[i] in ('i'):
-            res += 32
+        if fmt[i] in ('f', 'i'):
+            res += 32 * length
             i += 1
             continue
         if fmt[i] in ('s'):
